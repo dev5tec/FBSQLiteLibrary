@@ -23,6 +23,11 @@
 		4C6C4EDC140AF63D00DE5534 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C6C4EDA140AF63D00DE5534 /* InfoPlist.strings */; };
 		4C6C4EDE140AF63D00DE5534 /* FBSQLiteLibraryTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 4C6C4EDD140AF63D00DE5534 /* FBSQLiteLibraryTests.h */; };
 		4C6C4EE0140AF63D00DE5534 /* FBSQLiteLibraryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C4EDF140AF63D00DE5534 /* FBSQLiteLibraryTests.m */; };
+		4C6C4EEE140AF6F500DE5534 /* FBSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C4EEB140AF6F500DE5534 /* FBSQLiteManager.m */; };
+		4C6C4EEF140AF6F500DE5534 /* FBSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C4EEB140AF6F500DE5534 /* FBSQLiteManager.m */; };
+		4C6C4EF0140AF6F500DE5534 /* FBSQLiteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C4EED140AF6F500DE5534 /* FBSQLiteStatement.m */; };
+		4C6C4EF1140AF6F500DE5534 /* FBSQLiteStatement.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C6C4EED140AF6F500DE5534 /* FBSQLiteStatement.m */; };
+		4C6D719F140AF9D600447534 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6D719E140AF9D600447534 /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,22 +45,27 @@
 		4C6C4EAF140AF63C00DE5534 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4C6C4EB1140AF63C00DE5534 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4C6C4EB3140AF63C00DE5534 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4C6C4EB7140AF63C00DE5534 /* FBSQLiteLibrary-Info.plist */ = {isa = PBXFileReference; path = "FBSQLiteLibrary-Info.plist"; sourceTree = "<group>"; };
+		4C6C4EB7140AF63C00DE5534 /* FBSQLiteLibrary-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBSQLiteLibrary-Info.plist"; sourceTree = "<group>"; };
 		4C6C4EB9140AF63C00DE5534 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C6C4EBB140AF63C00DE5534 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4C6C4EBD140AF63C00DE5534 /* FBSQLiteLibrary-Prefix.pch */ = {isa = PBXFileReference; path = "FBSQLiteLibrary-Prefix.pch"; sourceTree = "<group>"; };
-		4C6C4EBE140AF63C00DE5534 /* FBSQLiteLibraryAppDelegate.h */ = {isa = PBXFileReference; path = FBSQLiteLibraryAppDelegate.h; sourceTree = "<group>"; };
+		4C6C4EBD140AF63C00DE5534 /* FBSQLiteLibrary-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FBSQLiteLibrary-Prefix.pch"; sourceTree = "<group>"; };
+		4C6C4EBE140AF63C00DE5534 /* FBSQLiteLibraryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBSQLiteLibraryAppDelegate.h; sourceTree = "<group>"; };
 		4C6C4EBF140AF63C00DE5534 /* FBSQLiteLibraryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBSQLiteLibraryAppDelegate.m; sourceTree = "<group>"; };
 		4C6C4EC2140AF63C00DE5534 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		4C6C4EC4140AF63C00DE5534 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		4C6C4EC4140AF63C00DE5534 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		4C6C4EC5140AF63C00DE5534 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		4C6C4EC8140AF63C00DE5534 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
 		4C6C4ECF140AF63C00DE5534 /* FBSQLiteLibraryTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FBSQLiteLibraryTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6C4ED0140AF63C00DE5534 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		4C6C4ED9140AF63D00DE5534 /* FBSQLiteLibraryTests-Info.plist */ = {isa = PBXFileReference; path = "FBSQLiteLibraryTests-Info.plist"; sourceTree = "<group>"; };
+		4C6C4ED9140AF63D00DE5534 /* FBSQLiteLibraryTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FBSQLiteLibraryTests-Info.plist"; sourceTree = "<group>"; };
 		4C6C4EDB140AF63D00DE5534 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4C6C4EDD140AF63D00DE5534 /* FBSQLiteLibraryTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBSQLiteLibraryTests.h; sourceTree = "<group>"; };
 		4C6C4EDF140AF63D00DE5534 /* FBSQLiteLibraryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FBSQLiteLibraryTests.m; sourceTree = "<group>"; };
+		4C6C4EEA140AF6F500DE5534 /* FBSQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSQLiteManager.h; sourceTree = "<group>"; };
+		4C6C4EEB140AF6F500DE5534 /* FBSQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSQLiteManager.m; sourceTree = "<group>"; };
+		4C6C4EEC140AF6F500DE5534 /* FBSQLiteStatement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBSQLiteStatement.h; sourceTree = "<group>"; };
+		4C6C4EED140AF6F500DE5534 /* FBSQLiteStatement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBSQLiteStatement.m; sourceTree = "<group>"; };
+		4C6D719E140AF9D600447534 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C6D719F140AF9D600447534 /* libsqlite3.0.dylib in Frameworks */,
 				4C6C4EB0140AF63C00DE5534 /* UIKit.framework in Frameworks */,
 				4C6C4EB2140AF63C00DE5534 /* Foundation.framework in Frameworks */,
 				4C6C4EB4140AF63C00DE5534 /* CoreGraphics.framework in Frameworks */,
@@ -86,7 +97,8 @@
 		4C6C4EA0140AF63C00DE5534 = {
 			isa = PBXGroup;
 			children = (
-				4C6C4EB5140AF63C00DE5534 /* FBSQLiteLibrary */,
+				4C6C4EE9140AF6A900DE5534 /* FBSQLiteLibrary */,
+				4C6C4EB5140AF63C00DE5534 /* Test Application */,
 				4C6C4ED7140AF63D00DE5534 /* FBSQLiteLibraryTests */,
 				4C6C4EAE140AF63C00DE5534 /* Frameworks */,
 				4C6C4EAC140AF63C00DE5534 /* Products */,
@@ -105,6 +117,7 @@
 		4C6C4EAE140AF63C00DE5534 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4C6D719E140AF9D600447534 /* libsqlite3.0.dylib */,
 				4C6C4EAF140AF63C00DE5534 /* UIKit.framework */,
 				4C6C4EB1140AF63C00DE5534 /* Foundation.framework */,
 				4C6C4EB3140AF63C00DE5534 /* CoreGraphics.framework */,
@@ -113,7 +126,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		4C6C4EB5140AF63C00DE5534 /* FBSQLiteLibrary */ = {
+		4C6C4EB5140AF63C00DE5534 /* Test Application */ = {
 			isa = PBXGroup;
 			children = (
 				4C6C4EBE140AF63C00DE5534 /* FBSQLiteLibraryAppDelegate.h */,
@@ -124,7 +137,7 @@
 				4C6C4EC7140AF63C00DE5534 /* RootViewController.xib */,
 				4C6C4EB6140AF63C00DE5534 /* Supporting Files */,
 			);
-			path = FBSQLiteLibrary;
+			path = "Test Application";
 			sourceTree = "<group>";
 		};
 		4C6C4EB6140AF63C00DE5534 /* Supporting Files */ = {
@@ -155,6 +168,17 @@
 				4C6C4EDA140AF63D00DE5534 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C6C4EE9140AF6A900DE5534 /* FBSQLiteLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				4C6C4EEA140AF6F500DE5534 /* FBSQLiteManager.h */,
+				4C6C4EEB140AF6F500DE5534 /* FBSQLiteManager.m */,
+				4C6C4EEC140AF6F500DE5534 /* FBSQLiteStatement.h */,
+				4C6C4EED140AF6F500DE5534 /* FBSQLiteStatement.m */,
+			);
+			path = FBSQLiteLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +289,8 @@
 				4C6C4EBC140AF63C00DE5534 /* main.m in Sources */,
 				4C6C4EC0140AF63C00DE5534 /* FBSQLiteLibraryAppDelegate.m in Sources */,
 				4C6C4EC6140AF63C00DE5534 /* RootViewController.m in Sources */,
+				4C6C4EEE140AF6F500DE5534 /* FBSQLiteManager.m in Sources */,
+				4C6C4EF0140AF6F500DE5534 /* FBSQLiteStatement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +299,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C6C4EE0140AF63D00DE5534 /* FBSQLiteLibraryTests.m in Sources */,
+				4C6C4EEF140AF6F500DE5534 /* FBSQLiteManager.m in Sources */,
+				4C6C4EF1140AF6F500DE5534 /* FBSQLiteStatement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,8 +397,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FBSQLiteLibrary/FBSQLiteLibrary-Prefix.pch";
-				INFOPLIST_FILE = "FBSQLiteLibrary/FBSQLiteLibrary-Info.plist";
+				GCC_PREFIX_HEADER = "Test Application/FBSQLiteLibrary-Prefix.pch";
+				INFOPLIST_FILE = "Test Application/FBSQLiteLibrary-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -380,8 +408,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FBSQLiteLibrary/FBSQLiteLibrary-Prefix.pch";
-				INFOPLIST_FILE = "FBSQLiteLibrary/FBSQLiteLibrary-Info.plist";
+				GCC_PREFIX_HEADER = "Test Application/FBSQLiteLibrary-Prefix.pch";
+				INFOPLIST_FILE = "Test Application/FBSQLiteLibrary-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -440,6 +468,7 @@
 				4C6C4EE5140AF63D00DE5534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C6C4EE6140AF63D00DE5534 /* Build configuration list for PBXNativeTarget "FBSQLiteLibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +477,7 @@
 				4C6C4EE8140AF63D00DE5534 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
