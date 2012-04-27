@@ -47,8 +47,6 @@ int _countTableCallback(void* arg, int size, char** values, char** columns);
 {
     BOOL result = NO;
 
-    NSLog(@"dbPath: %@", self.dbPath);
-
     NSFileManager* fileManager = [NSFileManager defaultManager];
     if (![fileManager fileExistsAtPath:self.dbPath]) {
 
@@ -122,7 +120,7 @@ int _countTableCallback(void* arg, int size, char** values, char** columns);
         sqlite3_close(db_);
         db_ = NULL;
     } else {
-        NSLog(@"[WARN] The db has already been closed", nil);
+        NSLog(@"[WARN] The db has already been closed");
     }
 }
 
@@ -131,7 +129,7 @@ int _countTableCallback(void* arg, int size, char** values, char** columns);
     if (db_) {
         sqlite3_exec(db_, "BEGIN TRANSACTION", NULL, NULL, NULL);
     } else {
-        NSLog(@"[WARN] The db is closed", nil);
+        NSLog(@"[WARN] The db is closed");
     }
 }
 - (void)_rollbackTransaction
@@ -139,7 +137,7 @@ int _countTableCallback(void* arg, int size, char** values, char** columns);
     if(db_) {
         sqlite3_exec(db_, "ROLLBACK TRANSACTION", NULL, NULL, NULL);            
     } else {
-        NSLog(@"[WARN] The db is closed", nil);
+        NSLog(@"[WARN] The db is closed");
     }
 }
 
@@ -148,7 +146,7 @@ int _countTableCallback(void* arg, int size, char** values, char** columns);
     if (db_) {
         sqlite3_exec(db_, "COMMIT TRANSACTION", NULL, NULL, NULL);
     } else {
-        NSLog(@"[WARN] The db is closed", nil);
+        NSLog(@"[WARN] The db is closed");
     }
 }
 
@@ -237,6 +235,7 @@ int _countTableCallback(void* arg, int size, char** values, char** columns);
     }
     return result;
 }
+
 - (BOOL)executeSQL:(NSString*)sql
 {
     return [self executeSQL:sql changes:NULL];
@@ -288,6 +287,11 @@ int _countTableCallback(void* arg, int size, char** values, char** columns) {
         NSLog(@"[ERROR] %s", errmsg);
     }
     return count;
+}
+
+- (int64_t)lastInsertId
+{
+    return sqlite3_last_insert_rowid(db_);
 }
 
 @end

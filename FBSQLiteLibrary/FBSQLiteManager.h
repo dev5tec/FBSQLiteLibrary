@@ -30,4 +30,6 @@
 
 - (int)countTable:(NSString*)tableName;
 
+- (int64_t)lastInsertId;
+
 @end
