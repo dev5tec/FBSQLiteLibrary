@@ -33,7 +33,6 @@ int _countTableCallback(void* arg, int size, char** values, char** columns);
         NSLog(@"[ERROR] Didn't exist the template db '%@'", self.dbName);
     } else {
         if ([fileManager copyItemAtPath:templateFilePath toPath:self.dbPath error:&error]) {
-            NSLog(@"%s|%@", __PRETTY_FUNCTION__, @"copied");
             result = YES;
             
         } else {
@@ -52,7 +51,6 @@ int _countTableCallback(void* arg, int size, char** values, char** columns);
 
         NSString* templateFilePath = [[NSBundle mainBundle] pathForResource:templateName
                                                                      ofType:nil];
-        NSLog(@"template: %@", templateFilePath);
         if (templateFilePath) {
             result = [self _copyDBFromTemplateFilePath:templateFilePath];
         } else {
